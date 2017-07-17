@@ -1,7 +1,7 @@
 package com.jelvix.kotlincodesample
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -9,4 +9,6 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
     }
+
+
 }
