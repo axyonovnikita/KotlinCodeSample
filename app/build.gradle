@@ -25,18 +25,18 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(dir: 'libs', include: ['*.jar'])
 
     // Tests
-    androidTestImplementation ("com.android.support.test.espresso:espresso-core:${libs.espressoCoreVersion}", {
+    androidTestCompile ("com.android.support.test.espresso:espresso-core:${libs.espressoCoreVersion}", {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    testImplementation "junit:junit:$libs.junitVersion"
+    testCompile "junit:junit:$libs.junitVersion"
 
     // Android Support Libraries
-    implementation "com.android.support:appcompat-v7:${libs.supportVersion}"
-    implementation "com.android.support.constraint:constraint-layout:${libs.constraintVersion}"
+    compile "com.android.support:appcompat-v7:${libs.supportVersion}"
+    compile "com.android.support.constraint:constraint-layout:${libs.constraintVersion}"
 
     // Kotlin
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:${libs.kotlinVersion}"
+    compile"org.jetbrains.kotlin:kotlin-stdlib-jre7:${libs.kotlinVersion}"
 }
