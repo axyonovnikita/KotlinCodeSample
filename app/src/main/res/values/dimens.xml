@@ -1,0 +1,53 @@
+<!--Jelvix demo CodeSample
+    Copyright © 2017 Jelvix. All rights reserved.-->
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- offsets -->
+
+    <dimen name="offset_small1">2dp</dimen>
+    <dimen name="offset_small2">4dp</dimen>
+    <dimen name="offset_small3">8dp</dimen>
+    <dimen name="offset_small4">12dp</dimen>
+    <dimen name="offset_normal1">16dp</dimen>
+    <dimen name="offset_normal2">24dp</dimen>
+    <dimen name="offset_big1">32dp</dimen>
+    <dimen name="offset_big2">48dp</dimen>
+    <dimen name="offset_big3">72dp</dimen>
+    <dimen name="offset_big4">96dp</dimen>
+    <dimen name="offset_big5">136dp</dimen>
+
+    <!-- textSizes -->
+
+    <dimen name="textSize_small1">6sp</dimen>
+    <dimen name="textSize_small2">8sp</dimen>
+    <dimen name="textSize_small3">10sp</dimen>
+    <dimen name="textSize_small4">12sp</dimen>
+    <dimen name="textSize_normal1">14sp</dimen>
+    <dimen name="textSize_normal2">17sp</dimen>
+    <dimen name="textSize_large1">20sp</dimen>
+    <dimen name="textSize_large2">25sp</dimen>
+
+    <!--icon size-->
+
+    <dimen name="icon_material_size">48dp</dimen>
+
+    <dimen name="user_avatar_size">64dp</dimen>
+    <dimen name="user_avatar_large">124dp</dimen>
+    <dimen name="user_avatar_size_small">40dp</dimen>
+
+    <!--dividers-->
+    <dimen name="divider_small">1dp</dimen>
+
+    <!--indicator-->
+    <dimen name="indicator_size">14dp</dimen>
+
+    <!--login screen-->
+    <dimen name="login_card_view_width">300dp</dimen>
+    <dimen name="login_decor_width">6dp</dimen>
+    <dimen name="login_decor_height">40dp</dimen>
+    <dimen name="login_decor_offset">-20dp</dimen>
+
+</resources>

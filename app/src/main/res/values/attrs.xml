@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Jelvix demo CodeSample
+    Copyright © 2017 Jelvix. All rights reserved.-->
+<resources>
+    <declare-styleable name="AutoLoadingRecyclerView">
+        <attr name="isFooterEnabled" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="MaterialProgressBar">
+        <attr name="progressColour" format="color" />
+        <attr name="secondaryProgressColour" format="color" />
+        <attr name="backgroundColour" format="color" />
+        <attr name="duration" format="integer" />
+    </declare-styleable>
+</resources>

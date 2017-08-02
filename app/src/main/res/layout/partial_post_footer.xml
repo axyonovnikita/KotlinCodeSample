@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Jelvix demo CodeSample
+    Copyright © 2017 Jelvix. All rights reserved.-->
+<LinearLayout android:id="@+id/footer_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ContentDescription"
+    android:paddingBottom="@dimen/offset_normal1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/offset_big1"
+        android:layout_margin="@dimen/offset_small3">
+
+        <ImageView
+            android:id="@+id/like_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/offset_small2"
+            app:srcCompat="@drawable/ic_like" />
+
+        <ImageView
+            android:id="@+id/comment_imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/offset_small2"
+            app:srcCompat="@drawable/ic_comment" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/likeCount_textView"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/offset_big1"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/offset_normal1"
+        android:paddingRight="@dimen/offset_normal1"
+        android:paddingTop="@dimen/offset_small3"
+        android:paddingBottom="@dimen/offset_small3"
+        android:textColor="@color/secondary_text"
+        android:textSize="@dimen/textSize_normal1"
+        tools:text="like: 50" />
+
+    <TextView
+        android:id="@+id/caption_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/offset_normal1"
+        android:paddingRight="@dimen/offset_normal1"
+        android:paddingTop="@dimen/offset_small3"
+        android:paddingBottom="@dimen/offset_small3"
+        tools:text="last comment" />
+
+    <TextView
+        android:id="@+id/commentCount_textView"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/offset_big1"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/offset_normal1"
+        android:paddingRight="@dimen/offset_normal1"
+        android:paddingTop="@dimen/offset_small3"
+        android:paddingBottom="@dimen/offset_small3"
+        android:textColor="@color/secondary_text"
+        tools:text="show all comments" />
+</LinearLayout>

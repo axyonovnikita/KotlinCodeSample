@@ -1,3 +1,46 @@
+<!--Jelvix demo CodeSample
+    Copyright © 2017 Jelvix. All rights reserved.-->
 <resources>
     <string name="app_name">Kotlin Code Sample</string>
+
+    <string name="error_unknown">Unknown error</string>
+    <string name="warning">Warning</string>
+    <string name="success">Success</string>
+    <string name="sorry">Sorry</string>
+    <string name="ok">OK</string>
+    <string name="processing">Processing</string>
+    <string name="please_wait">Please wait</string>
+    <string name="error_no_internet">Bad internet connection, please, try latter</string>
+    <string name="error_token_expired">Please, login again</string>
+    <string name="cancel">Cancel</string>
+    <string name="try_later">Something went wrong try later</string>
+
+    <string name="sign_in_with_instagram">Sign in with Instagram</string>
+
+    <string name="posts">posts</string>
+    <string name="followers">followers</string>
+    <string name="following">following</string>
+    <string name="unfollow">Unfollow</string>
+    <string name="question_unfollow">Unfollow %1$s?</string>
+    <string name="likes_count">%1$d likes</string>
+    <string name="comment_count">View all %1$d comments</string>
+    <string name="follow">follow</string>
+    <string name="likes">likes</string>
+    <string name="comments">comments</string>
+    <string name="your_comment">your comment</string>
+
+    <string name="day">%1$dd</string>
+    <string name="hour">%1$dh</string>
+    <string name="minute">%1$dm</string>
+    <string name="second">%1$ds</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="login_as">Login in as %1$s</string>
+    <string name="change_account">Change account</string>
+    <string name="not_username">Not %1$s?</string>
+    <string name="empty_username">Empty username</string>
+    <string name="empty_password">Empty password</string>
+    <string name="please_try_another_account">Please, try another account!</string>
+
 </resources>

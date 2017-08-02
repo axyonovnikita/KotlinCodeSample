@@ -1,13 +1,29 @@
+/**
+ * Jelvix demo CodeSample
+ * Copyright © 2017 Jelvix. All rights reserved.
+ */
+
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+//apply plugin: 'kotlin-kapt'
 
-def cfg = rootProject.ext.configuration
-def libs = rootProject.ext.libraries
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'android-apt'
+
+def cfg = configuration
+def libs = libraries
+
 
 android {
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     compileSdkVersion cfg.compileSdkVersion
     buildToolsVersion cfg.buildToolsVersion
+
     defaultConfig {
         applicationId cfg.appPackage
         minSdkVersion cfg.minSdkVersion
@@ -15,6 +31,7 @@ android {
         versionCode cfg.versionCode
         versionName cfg.versionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         release {
@@ -22,6 +39,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    productFlavors {
+        serverForTesting {
+            buildConfigField 'String', 'BASE_URL', '"https://api.instagram.com/v1/"'
+        }
+        productionServer {
+            buildConfigField 'String', 'BASE_URL', '"https://api.instagram.com/v1/"'
+        }
+    }
+  /*  sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }*/
 }
 
 dependencies {
@@ -36,7 +64,57 @@ dependencies {
     // Android Support Libraries
     compile "com.android.support:appcompat-v7:${libs.supportVersion}"
     compile "com.android.support.constraint:constraint-layout:${libs.constraintVersion}"
+    compile "com.android.support:recyclerview-v7:${libs.supportVersion}"
+    compile "com.android.support:cardview-v7:${libs.supportVersion}"
+    compile "com.android.support:design:${libs.supportVersion}"
 
     // Kotlin
     compile"org.jetbrains.kotlin:kotlin-stdlib-jre7:${libs.kotlinVersion}"
+
+    //AndroidAnnotations
+    apt "org.androidannotations:androidannotations:${libs.androidAnnotaionsVersion}"
+    compile "org.androidannotations:androidannotations-api:${libs.androidAnnotaionsVersion}"
+
+    //Dagger 2
+    apt "com.google.dagger:dagger-compiler:${libs.daggerVersion}"
+    compile "com.google.dagger:dagger:${libs.daggerVersion}"
+
+    //Gson
+    compile "com.google.code.gson:gson:${libs.gsonVersion}"
+
+    //Retrofit
+    compile "com.squareup.retrofit2:retrofit:${libs.retrofitVersion}"
+    compile "com.squareup.retrofit2:converter-gson:${libs.retrofitVersion}"
+    compile "com.squareup.okhttp3:okhttp:${libs.okHttpVersion}"
+    compile "com.squareup.okhttp3:logging-interceptor:${libs.okHttpVersion}"
+
+    //RxAndroid
+    compile "io.reactivex.rxjava2:rxandroid:${libs.rxAndroidVersion}"
+    compile "io.reactivex.rxjava2:rxjava:${libs.rxJavaVersion}"
+
+    //Stream API
+    compile "com.annimon:stream:${libs.streamApiVersion}"
+
+    //Moxy
+    compile "com.arello-mobile:moxy:${libs.moxyVersion}"
+    provided "com.arello-mobile:moxy-compiler:${libs.moxyVersion}"
+    compile "com.arello-mobile:moxy-app-compat:${libs.moxyVersion}"
+
+    //Picasso
+    compile "com.squareup.picasso:picasso:${libs.picassoVersion}"
+
+    // Navigation
+    compile "ru.terrakok.cicerone:cicerone:${libs.ciceroneVersion}"
+
+    //ExoMedia
+    compile "com.devbrackets.android:exomedia:${libs.exomediaVersion}"
+
+    // Icepick for saving and restoring instance state
+    compile "frankiesardo:icepick:${libs.icepickVersion}"
+    provided "frankiesardo:icepick-processor:${libs.icepickVersion}"
+
+    // leakcanary for memory leak
+    debugCompile "com.squareup.leakcanary:leakcanary-android:${libs.leakcanaryVersion}"
+    releaseCompile "com.squareup.leakcanary:leakcanary-android-no-op:${libs.leakcanaryVersion}"
+    testCompile "com.squareup.leakcanary:leakcanary-android-no-op:${libs.leakcanaryVersion}"
 }
