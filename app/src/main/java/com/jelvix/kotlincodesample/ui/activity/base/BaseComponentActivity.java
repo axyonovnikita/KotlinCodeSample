@@ -6,7 +6,7 @@ import android.os.Bundle;
 import com.arellomobile.mvp.MvpAppCompatActivity;
 import com.arellomobile.mvp.presenter.InjectPresenter;
 import com.jelvix.kotlincodesample.BuildConfig;
-import com.jelvix.kotlincodesample.JelvixDemoApplication;
+import com.jelvix.kotlincodesample.KotlinDemoApplication;
 import com.jelvix.kotlincodesample.R;
 import com.jelvix.kotlincodesample.api.api.exception.ApiException;
 import com.jelvix.kotlincodesample.inject.component.ActivityComponent;
@@ -33,7 +33,7 @@ import io.reactivex.disposables.Disposable;
 public abstract class BaseComponentActivity extends MvpAppCompatActivity implements IView, IBaseActivityView {
 
     private static ActivityComponent activityComponent = DaggerActivityComponent.builder()
-            .appComponent(JelvixDemoApplication.getAppComponent())
+            .appComponent(KotlinDemoApplication.getAppComponent())
             .build();
 
     @InjectPresenter

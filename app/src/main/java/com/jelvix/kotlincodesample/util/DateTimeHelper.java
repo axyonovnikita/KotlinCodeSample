@@ -2,7 +2,7 @@ package com.jelvix.kotlincodesample.util;
 
 import android.content.res.Resources;
 
-import com.jelvix.kotlincodesample.JelvixDemoApplication;
+import com.jelvix.kotlincodesample.KotlinDemoApplication;
 import com.jelvix.kotlincodesample.R;
 
 import java.text.SimpleDateFormat;
@@ -43,7 +43,7 @@ public class DateTimeHelper {
         final long weeks = days / DAYS_IN_WEEK;
 
         String time;
-        Resources resources = JelvixDemoApplication.getAppComponent().provideResources();
+        Resources resources = KotlinDemoApplication.getAppComponent().provideResources();
         if (weeks > 0) {
             if (currentYear == year) {
                 SimpleDateFormat simpleDateFormat = new SimpleDateFormat(DateTimeHelper.PATTERN_DATE_SHORT, Locale.US);

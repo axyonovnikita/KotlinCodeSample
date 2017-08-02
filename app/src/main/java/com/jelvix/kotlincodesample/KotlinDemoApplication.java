@@ -14,7 +14,7 @@ import com.squareup.leakcanary.LeakCanary;
  * Copyright © 2017 Jelvix. All rights reserved.
  */
 
-public class JelvixDemoApplication extends Application {
+public class KotlinDemoApplication extends Application {
 
     public static AppComponent appComponent;
 

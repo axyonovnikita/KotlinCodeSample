@@ -3,7 +3,7 @@ package com.jelvix.kotlincodesample.inject.component;
 import android.content.Context;
 import android.content.res.Resources;
 
-import com.jelvix.kotlincodesample.JelvixDemoApplication;
+import com.jelvix.kotlincodesample.KotlinDemoApplication;
 import com.jelvix.kotlincodesample.inject.module.ApiModule;
 import com.jelvix.kotlincodesample.inject.module.AppModule;
 import com.jelvix.kotlincodesample.inject.module.NavigationModule;
@@ -26,7 +26,7 @@ import ru.terrakok.cicerone.Router;
 @Component(modules = {AppModule.class, ApiModule.class, PreferenceModule.class, NavigationModule.class})
 public interface AppComponent {
 
-    void inject(JelvixDemoApplication application);
+    void inject(KotlinDemoApplication application);
 
     Context provideContext();
 

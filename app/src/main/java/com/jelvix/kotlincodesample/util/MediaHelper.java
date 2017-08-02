@@ -5,7 +5,7 @@ import android.graphics.Point;
 import android.view.Display;
 import android.view.WindowManager;
 
-import com.jelvix.kotlincodesample.JelvixDemoApplication;
+import com.jelvix.kotlincodesample.KotlinDemoApplication;
 
 /**
  * Jelvix demo CodeSample
@@ -23,7 +23,7 @@ public class MediaHelper {
     }
 
     private static Point getDisplayPoint() {
-        Context applicationContext = JelvixDemoApplication.getAppComponent().provideContext();
+        Context applicationContext = KotlinDemoApplication.getAppComponent().provideContext();
         Display display = ((WindowManager) applicationContext.getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
         Point point = new Point();
         display.getSize(point);

@@ -5,7 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 import com.arellomobile.mvp.MvpPresenter;
-import com.jelvix.kotlincodesample.JelvixDemoApplication;
+import com.jelvix.kotlincodesample.KotlinDemoApplication;
 import com.jelvix.kotlincodesample.inject.component.DaggerPresenterComponent;
 import com.jelvix.kotlincodesample.inject.component.PresenterComponent;
 import com.jelvix.kotlincodesample.util.bean.Alert;
@@ -34,7 +34,7 @@ public abstract class RxBasePresenter<View extends IView> extends MvpPresenter<V
     private static final int API_CALL_SUBSCRIPTION_DELAY = 500;
 
     private static PresenterComponent presenterComponent = DaggerPresenterComponent.builder()
-            .appComponent(JelvixDemoApplication.getAppComponent())
+            .appComponent(KotlinDemoApplication.getAppComponent())
             .build();
 
     private CompositeDisposable compositeDisposable;
